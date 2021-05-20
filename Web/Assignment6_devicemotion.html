@@ -1,0 +1,87 @@
+<html>
+<head>
+	<style>
+		
+		#line {border:1px solid}
+		
+	</style>
+</head>
+<body>
+<canvas Id ="line"></canvas>
+
+<script>
+
+var beforeRendering = new Date();
+console.log(beforeRendering);
+
+var Canvas = document.getElementById('line');
+
+var c = line.getContext('2d');
+
+Canvas.width=window.innerWidth;
+Canvas.height=window.innerHeight;
+
+
+
+// window.requestAnimationFrame(e);
+
+for(var i=0; i<70; i++){
+c.moveTo(0+40*i,0);
+c.bezierCurveTo(80+i*30, 30-30*i,
+			   -80+i*30,250-31*i,
+				0+i*30,  480-32*i)
+
+c.bezierCurveTo(80+i*30, 680-32*i,
+				-80+i*30,880-31*i, 
+				0+i*30, 1080-30*i)
+
+c.bezierCurveTo(80+i*30, 1280-30*i,
+				-80+i*30,1480-31*i, 
+				0+i*30, 1680-30*i)
+
+c.bezierCurveTo(80+i*30, 1880-30*i,
+				-80+i*30,2080-31*i, 
+				0+i*30, 2280-30*i)
+c.strokeStyle ='#a8c25b'
+c.lineWidth = 15;
+c.stroke();
+
+}
+
+c.strokeStyle ='#f5a89d'
+c.lineWidth = 7;
+c.stroke();
+
+c.strokeStyle ='#638094'
+c.lineWidth = 2;
+c.stroke();
+
+var afterRendering= new Date();
+console.log(afterRendering)
+
+var renderTime= afterRendering.getTime()- beforeRendering.getTime();
+
+console.log(renderTime);
+
+// function animate(){
+// 	c.clear(0,0,cW,cH);
+// 	c.strokeStyle="yellow"
+// 	x+=10;
+
+
+// window.addEventListener("devicemotion", function(e);
+// function handleMotionEvent(e){
+// 	var x=event.accelerationIncludeingGravity.x;
+// 	var y=event.accelerationIncludeingGravity.y;
+// 	var z=event.accelerationIncludeingGravity.z;
+// }
+
+
+
+</script>
+</body>
+
+
+</html>
+
+
