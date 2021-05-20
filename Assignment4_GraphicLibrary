@@ -1,0 +1,129 @@
+<html>
+<head>
+	<title>Hello Charlie</title>
+	<h1><strong><p style="font-family:sans-serif" align="center" ><font color="blue">Do you want to know who I am?</p></strong></h1></font>
+
+<div>
+<input type="button" value="Yes or No" onclick="changeImage()" Id="btn" >
+</div>
+	<style>
+	#btn { 
+		padding:7px;
+		width: 100px;
+		margin-left:auto;
+		margin-right:auto;
+		display:flex; justify-content:center;
+		}
+</style>
+	<section class="container">
+
+<style>
+	body {background-color:#F5F5DC;}
+.container {display:grid;
+		  grid-template-columns:1fr 1fr 1fr;
+		}
+
+.container div{background-color: #f7bc95; margin:20px; box-shadow: 28px 33px 21px -8px rgba(120,118,120,1);}
+#mainImage {border-radius:25px; border:5px solid black; }
+
+	@media (max-width: 900px){
+		body {background-color:#c1ebf5;}
+		.container {display:grid;
+		  grid-template-columns:1fr 1fr ;
+		}
+		#mainImage{width:100%}
+		#end {float:none; width:100%;}
+		
+		}
+
+	@media (max-width: 500px){ 
+		body {background-color:#d0f5d6;}
+		.container {display:grid;
+		  grid-template-columns:1fr ;
+		}
+        #video, #end{float:none; width:auto;}
+
+		}
+
+		#mainImage:hover{transform:rotate3d(9,8,10,180deg);}
+	
+
+	.button {
+  border-radius: 10px;
+  background-color: #f27cd5;
+  border:none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 100px;b
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left:auto;
+		margin-right:auto;
+		display:flex; justify-content:center;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+	
+
+		
+		 
+</style>
+
+	
+<script>
+function changeImage(){
+var mainImage=document.getElementById("mainImage");
+mainImage.src="https://live.staticflickr.com/3137/2551809640_93c0918460_b.jpg"
+}
+
+</script>
+</head>
+ 
+<body>
+
+	<div>
+		<Img src ="https://whitneymedia.org/assets/artwork/6068/142500.jpeg" id="mainImage" width="300" height="400" title="Who Am I">
+
+</div>
+
+<div>
+<iframe width="500" height="370" src="https://www.youtube.com/embed/K-CvKEwjxBU" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="video" allowfullscreen></iframe>
+</div>
+
+<div id="end">
+<p style= "font-family:Trebuchet MS;"><font color="ff0048">Where should I go to meet him in NYC?</font></p><br><br>
+
+
+
+<a href="https://whitney.org" target="_blank"><button class="button"><span>HERE </span></button></a>
+
+
+</div>
+	</body>
+</html>
